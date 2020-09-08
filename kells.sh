@@ -16,6 +16,6 @@ do
      i=$(($i+1))
      file="kells-$page-$i.jpg"
      echo $file
-     curl "https://digitalcollections.tcd.ie$d" > $file
+     curl "https://digitalcollections.tcd.ie$d" | convert -quality 80 - "$file"
    done
 done
